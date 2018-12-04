@@ -1,0 +1,74 @@
+@keyframes seq-preloader {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+	
+.seq-preloader {
+	background: white;
+	visibility: visible;
+	opacity: 1;
+	position: fixed;
+	z-index: 9999;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	&.none {
+		transition: all ease 0.5s;
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+
+.seq-preload-indicator {
+	overflow: visible;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+	
+.seq-preload-circle {
+	display: inline-block;
+	height: 12px;
+	width: 12px;
+	fill: $color;
+	opacity: 0;
+	animation: seq-preloader 1.25s infinite;
+}
+	
+.seq-preload-circle-2 {
+	animation-delay: .15s;
+}
+.seq-preload-circle-3 {
+	animation-delay: .3s;
+}
+.seq-preload-indicator-fallback {
+	width: 42px;
+	overflow: visible;
+	.seq-preload-circle {
+		width: 8px;
+		height: 8px;
+		background-color: $color;
+		border-radius: 100%;
+		opacity: 1;
+		display: inline-block;
+		vertical-align: middle;
+		}
+		.seq-preload-circle-2 {
+			margin-left: 3px;
+			margin-right: 3px;
+			width: 12px;
+			height: 12px;
+			}
+			.seq-preload-circle-3 {
+				width: 16px;
+				height: 16px;
+			}
+}

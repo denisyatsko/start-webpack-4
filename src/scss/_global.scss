@@ -1,0 +1,174 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;	
+}
+
+body {
+	min-width: 320px;
+	position: relative;
+	line-height: 1.75;
+	font-size: 18px;
+	overflow-x: hidden;
+	opacity: 1;
+	display: flex;
+	flex-direction: column;
+	flex: auto;
+	font-family: $default;
+	min-height: 100vh;
+	text-size-adjust: 100%;
+	font-smoothing: antialiased;
+    font-variant-ligatures: none;
+}
+	
+ul, li {
+	list-style-type: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+p {
+	font-size: 18px;
+	line-height: 24px;
+	margin-bottom: 20px;
+}
+
+svg {
+	// width: 100%;
+	// height: 100%;
+}
+
+p::selection,
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+span::selection,
+label::selection,
+li::selection {
+	background: $color;
+}
+
+a,
+a:hover,
+a:focus {
+	text-decoration: none;
+	outline: none;
+}
+
+button,
+button:hover,
+button:focus {
+	outline: none;
+}
+
+input:focus,
+textarea:focus {
+	outline: none;
+}
+
+// --------------- Safari, Chrome, Edge, Opera --------------------
+
+// scrollbar start
+::-webkit-scrollbar {
+	width: 5px;
+	background-color: #b6b6b6;
+}
+::-webkit-scrollbar:horizontal {
+	height: 3px;
+}
+::-webkit-scrollbar-thumb {
+	border-width: 1px 1px 1px 2px;
+	border-color: #b6b6b6;
+	background-color: $color;
+}
+::-webkit-scrollbar-track {
+	border-width: 0;
+}
+// scrollbar end
+
+// placeholder start
+::-webkit-input-placeholder {
+	font-family: $default;
+	color: #333;
+	font-size: 14px;
+	opacity: 1;
+	transition: opacity 0.3s ease;
+}    
+
+:focus::-webkit-input-placeholder {
+	opacity: 0;
+} 
+// placeholder end
+
+// --------------- Mozilla --------------------
+
+// Firefox 50+
+input::-moz-placeholder {
+	font-family: $default;
+	color: #333;
+	font-size: 14px;               
+	opacity: 1;
+}
+
+input:focus::-moz-placeholder {
+	opacity: 0;
+}  
+
+// Firefox 50-
+input:-moz-placeholder {
+	font-family: $default;
+	color: #333;
+	font-size: 14px;               
+	opacity: 1;
+}
+
+input:focus:-moz-placeholder {
+	opacity: 0;
+}        
+
+// --------------- IE 11 --------------------
+         
+:-ms-input-placeholder {
+	font-family: $default;
+	color: #333;
+	font-size: 14px;           
+	opacity: 1;
+	transition: opacity 0.3s ease;
+}   
+
+:focus:-ms-input-placeholder {
+	opacity: 0;
+}
+
+.scrollbar	{
+	&::-webkit-scrollbar {
+		width: 10px;
+		background-color: transparent;
+	}
+	&::-webkit-scrollbar-thumb {
+		border-radius: 10px;
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+		border-top: 3px solid transparent;
+		border-bottom: 3px solid transparent;
+		border-right: 3px solid transparent;
+		background-color: transparent;
+	}
+	&::-webkit-scrollbar-track {
+		border-radius: 10px;
+		box-shadow: inset 5px 0 0 #333;
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+		background-color: transparent;
+		border-top: 5px solid transparent;
+		border-bottom: 5px solid transparent;
+	}
+	&--pink {
+		&::-webkit-scrollbar-thumb {
+			box-shadow: inset 5px 0 0 $color;
+		}
+	}
+}	

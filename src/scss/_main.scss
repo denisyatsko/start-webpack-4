@@ -1,0 +1,19 @@
+.title {
+	font-size: 55px;
+	font-style: italic;
+	text-decoration: underline;
+	text-transform: uppercase;
+	color: $text;
+	display: flex;
+	align-items: center;
+	&:after {
+		content: '';
+	}
+	@media #{$tablet} {
+   		font-size: 18px;
+	}
+	@media #{$large} {
+		text-decoration: none;
+	}
+}
+

@@ -1,0 +1,21 @@
+<% var data = {
+  title: "My Awesome application"
+}; %>
+
+<%= _.template(require('../includes/header.html'))(data) %>
+
+<section class="flex-column">
+	<h1 class="title order-3 order-lg-2">Webpack</h1>
+	<div class="svg-hover">
+		<svg class ="order-2 order-lg-3">
+		   <use xlink:href="icons/facebook-logo-button.svg#fb-svg"></use>
+		</svg>
+	</div>
+	<img src="img/webpack.jpg" alt="" class="order-1 order-lg-3">
+	<input type="text" placeholder="Some text">
+	<br>
+	<br>
+	<p class="count-text" data-count="200">200</p>
+</section>
+	
+<%= require('../includes/footer.html') %>
